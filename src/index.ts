@@ -23,6 +23,10 @@ app.use(helmet());
 // [MongoDB]
 // db.connection();
 
+// [Rutas]
+// import ContactRoutes from './routes/contact.routes';
+// app.use('/api/contact', ContactRoutes);
+
 // [Necesario para no perder las rutas en produccion]
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'));
